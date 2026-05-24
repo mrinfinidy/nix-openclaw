@@ -1,4 +1,4 @@
-# Generated from upstream OpenClaw schema at rev ae79e6e5ec82eb1fc7f3de31ed5d67832b3fb83e. DO NOT EDIT.
+# Generated from upstream OpenClaw schema at rev d4299dcbaa533a6a6f6e38bcd59f4313f8db821f. DO NOT EDIT.
 # Generator: nix/scripts/generate-config-options.ts
 { lib }:
 let
@@ -784,6 +784,10 @@ in
           default = null;
         };
       }; }) ]);
+        default = null;
+      };
+      imageQuality = lib.mkOption {
+        type = t.nullOr (t.enum [ "auto" "efficient" "balanced" "high" ]);
         default = null;
       };
       maxConcurrent = lib.mkOption {
@@ -6608,6 +6612,36 @@ in
         };
         maxTokens = lib.mkOption {
           type = t.nullOr (t.number);
+          default = null;
+        };
+        mediaInput = lib.mkOption {
+          type = t.nullOr (t.submodule { options = {
+          image = lib.mkOption {
+            type = t.nullOr (t.submodule { options = {
+            maxBytes = lib.mkOption {
+              type = t.nullOr (t.int);
+              default = null;
+            };
+            maxPixels = lib.mkOption {
+              type = t.nullOr (t.int);
+              default = null;
+            };
+            maxSidePx = lib.mkOption {
+              type = t.nullOr (t.int);
+              default = null;
+            };
+            preferredSidePx = lib.mkOption {
+              type = t.nullOr (t.int);
+              default = null;
+            };
+            tokenMode = lib.mkOption {
+              type = t.nullOr (t.oneOf [ (t.enum [ "tile" ]) (t.enum [ "detail" ]) (t.enum [ "provider" ]) ]);
+              default = null;
+            };
+          }; });
+            default = null;
+          };
+        }; });
           default = null;
         };
         metadataSource = lib.mkOption {
