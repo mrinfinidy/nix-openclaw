@@ -1,4 +1,4 @@
-# Generated from upstream OpenClaw schema at rev 2a73725b5d6a3f2dfe2add73eaf104c83f650b38. DO NOT EDIT.
+# Generated from upstream OpenClaw schema at rev ffb02a59199f1beb409a4e579d5b1c60877b7db1. DO NOT EDIT.
 # Generator: nix/scripts/generate-config-options.ts
 { lib }:
 let
@@ -6303,7 +6303,7 @@ in
         default = null;
       };
       api = lib.mkOption {
-        type = t.nullOr (t.enum [ "openai-completions" "openai-responses" "openai-codex-responses" "anthropic-messages" "google-generative-ai" "github-copilot" "bedrock-converse-stream" "ollama" "azure-openai-responses" ]);
+        type = t.nullOr (t.enum [ "openai-completions" "openai-responses" "openai-codex-responses" "anthropic-messages" "google-generative-ai" "google-vertex" "github-copilot" "bedrock-converse-stream" "ollama" "azure-openai-responses" ]);
         default = null;
       };
       apiKey = lib.mkOption {
@@ -6446,7 +6446,7 @@ in
           default = null;
         };
         api = lib.mkOption {
-          type = t.nullOr (t.enum [ "openai-completions" "openai-responses" "openai-codex-responses" "anthropic-messages" "google-generative-ai" "github-copilot" "bedrock-converse-stream" "ollama" "azure-openai-responses" ]);
+          type = t.nullOr (t.enum [ "openai-completions" "openai-responses" "openai-codex-responses" "anthropic-messages" "google-generative-ai" "google-vertex" "github-copilot" "bedrock-converse-stream" "ollama" "azure-openai-responses" ]);
           default = null;
         };
         baseUrl = lib.mkOption {
